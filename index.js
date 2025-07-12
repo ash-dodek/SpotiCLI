@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import { trackSelector } from "./src/cli/Print.js"
 import { getUrlByName, playSong } from "./src/services/AudioStreamer.js";
 import { authorizeSpotify, searchTracks } from "./src/services/Spotify.js"
@@ -18,8 +19,12 @@ while (true) {
     }
   ])
 
-  await searchAndPlay(answer)
-  
+  const res = await searchAndPlay(answer)
+  console.log(res)
+  if(res === true) {
+    console.clear()
+  }
+  console.log(chalk.blueBright.bold("The song has ended! Enter the name of another song to continue listening\n"))
 }
 
 async function searchAndPlay(answer) {
@@ -33,5 +38,5 @@ async function searchAndPlay(answer) {
   const selectedTrack = await trackSelector(searchResult)
   const videoUrl = await getUrlByName(selectedTrack.name, selectedTrack.artists[0].name)
 
-  await playSong(videoUrl)
+  return await playSong(videoUrl)
 }

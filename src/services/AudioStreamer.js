@@ -1,7 +1,7 @@
 // mpv --no-video --vo=null --ao=alsa --ytdl-format=worstaudio https://www.youtube.com/watch?v=mVq6BQKUdjs
 import play from 'play-dl'
 import {spawn} from 'child_process'
-
+import chalk from 'chalk'
 
 export async function getUrlByName(name, author) {
     const ytSearchResults = await play.search(name+ " by "+author, {limit:5})
@@ -27,9 +27,8 @@ export async function playSong(url) {
         process.stdin.pipe(player.stdin)
         
         
-        
         player.on('spawn', (data) => {
-            console.log("Playing the song!")
+            console.log(chalk.greenBright.bold("Playing the song, it will start in a few seconds"))
         })
         player.on('error', (err) => {
             console.error('Failed to stream by mpv ',err.message)
@@ -42,8 +41,7 @@ export async function playSong(url) {
                 process.stdin.unpipe(player.stdin);
                 process.stdin.pause();
             } catch (e) {}
-            console.log("The song has ended! Enter the name of another song to continue listening\n")
-            resolve()
+            resolve(true)
         })
         
     })
