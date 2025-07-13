@@ -24,6 +24,10 @@ while (true) {
   if(res === true) {
     console.clear()
   }
+  else{
+    console.clear()
+    continue;
+  }
   console.log(chalk.blueBright.bold("The song has ended! Enter the name of another song to continue listening\n"))
 }
 
@@ -36,6 +40,9 @@ async function searchAndPlay(answer) {
 
 
   const selectedTrack = await trackSelector(searchResult)
+  if(selectedTrack === 101) {
+    return false;
+  }
   const videoUrl = await getUrlByName(selectedTrack.name, selectedTrack.artists[0].name)
 
   return await playSong(videoUrl)
