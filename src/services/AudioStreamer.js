@@ -28,7 +28,7 @@ export async function playSong(url) {
         
         
         player.on('spawn', (data) => {
-            console.log(chalk.greenBright.bold("Playing the song, it will start in a few seconds"))
+            console.log(chalk.greenBright.bold("Playing the song, it will start in a few seconds\nUse left and right arrow keys to adjust the song by 5s | Press spacebar to pause the song | Take the song till the end to finish it"))
         })
         player.on('error', (err) => {
             console.error('Failed to stream by mpv ',err.message)
