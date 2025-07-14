@@ -19,6 +19,11 @@ while (true) {
     }
   ])
 
+  if(answer.songName.toLowerCase() == 'exit') {
+    console.log("Exiting the program...")
+    break; 
+  }
+  
   const res = await searchAndPlay(answer)
   console.log(res)
   if(res === true) {
