@@ -12,6 +12,17 @@ Its easy to use with a clean UI
 - Control playback using arrow keys
 - Clean, readable CLI interface
 
+# Get CLIENT_SECRET AND CLIENT_ID from Spotify api
+- Step 1: Go to [Dashboard](https://developer.spotify.com/dashboard), there click on create app.
+- Step 2: Enter the required details, like app name, app description, you can enter anything you want
+- Step 3: In the redirect urls, enter anything like google.com or anything, doesnt matter much, or even put the github link of this repo
+- Step 4: At the bottom, it will ask you which APIs you want to use, select Web API.
+- Step 5: Click Save
+
+After the app has been created, copy the Client ID and Client Secret
+
+Then in the root directory, create a `.env` file, and add the fields CLIENT_ID = (one you copied) and CLIENT_SECRET = (one you copied)
+
 
 # Important
 
