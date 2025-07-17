@@ -15,9 +15,10 @@ export async function authorizeSpotify() {
         const data = await spotifyAPI.clientCredentialsGrant()
         spotifyAPI.setAccessToken(data.body['access_token'])
         console.log("User autenticated ")
-
+        return true
     } catch (err) {
-        console.error("Failed to authenticate: ", err)
+        console.error("Failed to authenticate: ", err.message)
+        return false
     }
 }
 

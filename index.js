@@ -4,10 +4,15 @@ import { getUrlByName, playSong } from "./src/services/AudioStreamer.js";
 import { authorizeSpotify, searchTracks } from "./src/services/Spotify.js"
 import inquirer from 'inquirer';
 
+
+const authorized = await authorizeSpotify()
+if(!authorized) {
+  console.log("Unable to authorize the user")
+  process.exit()
+}
+
 console.clear()
 console.log("\nWelcome to the CLI Based music player!\nFollow the instructions for more!\n\n\n")
-
-await authorizeSpotify()
 
 while (true) {
 
@@ -18,8 +23,12 @@ while (true) {
       message: 'Search by song name:'
     }
   ])
-
-  if(answer.songName.toLowerCase() == 'exit') {
+  if(answer.songName.trim() === '') {
+    console.log("Please enter a correct song name")
+    continue
+  }
+  
+  if(answer.songName.trim().toLowerCase() == 'exit') {
     console.log("Exiting the program...")
     break; 
   }
