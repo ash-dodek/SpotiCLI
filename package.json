@@ -1,5 +1,5 @@
 {
-  "name": "cli-spotify",
+  "name": "spoticli",
   "version": "1.0.0",
   "description": "A CLI based spotify(a music player for people who use terminal more than a browser :D)",
   "main": "index.js",
@@ -8,7 +8,8 @@
   },
   "keywords": [
     "cli",
-    "spotify"
+    "spotify",
+    "spoticli"
   ],
   "author": "Harsh Tripathi",
   "license": "ISC",

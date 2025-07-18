@@ -12,7 +12,7 @@ if(!authorized) {
 }
 
 console.clear()
-console.log("\nWelcome to the CLI Based music player!\nFollow the instructions for more!\n\n\n")
+console.log("\nWelcome to SpotiCLI, a CLI Based music player!\nFollow the instructions for more!\n\n\n")
 
 while (true) {
 
