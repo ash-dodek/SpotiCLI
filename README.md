@@ -40,8 +40,8 @@ If you are on windows, visit the website of [MPV Player](https://mpv.io/) and af
 ## Using the player:
 
 ```bash
-git clone https://github.com/ash-dodek/CLI-Spotify.git
-cd CLI-Spotify
+git clone https://github.com/ash-dodek/SpotiCLI.git
+cd SpotiCLI
 npm install
 ```
 Then run
