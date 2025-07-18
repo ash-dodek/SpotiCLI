@@ -1,4 +1,4 @@
-# 🎧 CLI Music Player (Spotify + YouTube)
+# 🎧 SpotiCLI, a CLI Music Player
 
 Are you a coding geek are tired of constantly switching between spotify and your terminal to change songs? Say no more!
 
