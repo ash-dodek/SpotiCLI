@@ -1,4 +1,4 @@
-# 🎧 SpotiCLI, a CLI Music Player
+# 🎧 SpotiCLI, a CLI based Music Player
 
 Are you a coding geek are tired of constantly switching between spotify and your terminal to change songs? Say no more!
 
