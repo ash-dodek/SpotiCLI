@@ -16,7 +16,7 @@ export async function playSong(url) {
 
     return new Promise((resolve, reject) => { 
         
-        const player = spawn('mpv', ['--no-video' ,'--vo=null', '--ao=alsa', '--term-status-msg=${time-pos}/${duration}/${percent-pos}', url], {
+        const player = spawn('mpv', ['--no-sub', '--no-audio-display', '--no-config' ,'--no-video' ,'--vo=null', '--term-status-msg=${time-pos}/${duration}/${percent-pos}', url], {
             // stdio: 'inherit'
             stdio: ['pipe', 'inherit', 'inherit']
         })
