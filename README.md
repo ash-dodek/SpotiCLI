@@ -5,6 +5,9 @@ Are you a coding geek are tired of constantly switching between spotify and your
 This is a terminal-based music player that lets you play songs right in your terminal!
 Its easy to use with a clean UI
 
+![Screenshot 1](./Screenshots/ss1.png?raw=true "Optional Title")
+
+
 # 🚀 How it works?
 - Takes input from the user, a song name, just like you search on spotify or youtube
 - Searches the given song by name (via Spotify) means that the program picks song name and artist from spotify
